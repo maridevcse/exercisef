@@ -110,7 +110,7 @@ apps.controller('myctrl',['$scope','$http',function($scope,$http){
 
         if($scope.artical.title!=''&& $scope.artical.intro!=''&&$scope.artical.content!=''&&$scope.author_id!=''){
 
-        $http.post(' http://simple-api.herokuapp.com/api/v1/articles',$scope.artical)
+        $http.post(' https://simple-api.herokuapp.com/api/v1/articles',$scope.artical)
         .then(el=>console.log(el))
         .catch(el=>console.log(el))
          $scope.articalData=[];
@@ -126,7 +126,7 @@ apps.controller('myctrl',['$scope','$http',function($scope,$http){
 
   $scope.getArticals=function(){
 
-    $http.get('http://simple-api.herokuapp.com/api/v1/articles')
+    $http.get('https://simple-api.herokuapp.com/api/v1/articles')
     .then(el=>{
 
         $scope.articalload=true;
