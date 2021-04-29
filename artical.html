@@ -1,0 +1,35 @@
+<div>
+    <center><h3>create a artical</h3></center>
+<center>
+
+
+    <form>
+    <input type="text" ng-model="artical.title" placeholder="artical title" >
+    <input type="text" ng-model="artical.intro" placeholder="artical intro" >
+    <input type="text" ng-model="artical.content" placeholder="artical content" >
+    <input type="number" ng-model="artical.author_id" placeholder="author id" >
+    <button  ng-click="postArtical()">post artical details</button>
+
+</center>
+
+</form>
+</div>
+
+<div>
+    <center><h2> click this button to Get all Articals</h2></center>
+    <center><button ng-click="getArticals()">get Articals</button></center>
+</div>
+
+<div ng-class={'loader':articalload}></div>
+<div style="display: flex;flex-wrap: wrap; justify-content: space-around;">
+    
+    <div ng-repeat='data in articalData' class="artical_box">
+        
+    <p>Title : <span ng-model="cool" contenteditable> {{data.title}} </span> </p> 
+    <p>intro : <span contenteditable>{{data.intro}}</span></p>
+    <p>author id : <span contenteditable>{{data.author_id}}</span></p>
+    <p>content : <span contenteditable>{{data.content}}</span></p>  
+    
+    </div>
+   
+</div>
